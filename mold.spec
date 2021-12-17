@@ -1,3 +1,5 @@
+%define _empty_manifest_terminate_build 0
+
 Summary: Modern and fast linker
 Name: mold
 Version: 1.0.0
