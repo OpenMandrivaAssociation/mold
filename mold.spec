@@ -3,7 +3,7 @@
 Summary: Modern and fast linker
 Name: mold
 Version: 1.0.0
-Release: 1
+Release: 2
 Group:   Development
 License: AGPLv3
 Source0: https://github.com/rui314/mold/archive/refs/tags/%{version}/%{name}-%{version}.tar.gz
@@ -11,6 +11,7 @@ BuildRequires: cmake
 BuildRequires: pkgconfig(libxxhash)
 BuildRequires: pkgconfig(openssl)
 BuildRequires: pkgconfig(zlib)
+BuildRequires: pkgconfig(tbb)
  
 %description
 mold is a faster drop-in replacement for existing Unix linkers.
@@ -23,16 +24,16 @@ build time especially in rapid debug-edit-rebuild cycles.
 %autosetup -p1
 
 %build
-%make_build
+%make_build PREFIX=%{_prefix} LIBDIR=%{_libdir} LTO=1 SYSTEM_TBB=1
 
 %install
 export MANDIR=%{_mandir}
 export LIBDIR=%{_libdir}
 export BINDIR=%{_bindir}
-%make_install
+%make_install LTO=1 SYSTEM_TBB=1
 
 %files
 %{_bindir}/mold
 %{_bindir}/l*
 %{_libdir}/mold/mold-wrapper.so
-%{_mandir}/man1/mold.1.*
+%{_mandir}/man1/mold.1*
