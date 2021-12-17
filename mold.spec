@@ -27,7 +27,7 @@ build time especially in rapid debug-edit-rebuild cycles.
 %make_install
 
 %files
-%{_bindir}/mold
-%{_bindir}/l*
-%{_libdir}/mold/mold-wrapper.so
-%{_mandir}/man1/mold.1.*
+#{_bindir}/mold
+#{_bindir}/l*
+#{_libdir}/mold/mold-wrapper.so
+#{_mandir}/man1/mold.1.*
