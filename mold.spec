@@ -36,5 +36,6 @@ export BINDIR=%{_bindir}
 %files
 %{_bindir}/mold
 %{_bindir}/l*
+%{_prefix}/local/libexec/mold/ld
 %{_libdir}/mold/mold-wrapper.so
 %{_mandir}/man1/mold.1*
