@@ -2,10 +2,11 @@
 
 Summary: Modern and fast linker
 Name: mold
-Version: 1.0.0
-Release: 2
+Version: 1.0.1
+Release: 1
 Group:   Development
 License: AGPLv3
+URL:     https://github.com/rui314/mold
 Source0: https://github.com/rui314/mold/archive/refs/tags/%{version}/%{name}-%{version}.tar.gz
 BuildRequires: cmake
 BuildRequires: pkgconfig(libxxhash)
