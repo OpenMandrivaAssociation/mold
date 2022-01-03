@@ -2,10 +2,11 @@
 
 Summary: Modern and fast linker
 Name: mold
-Version: 1.0.0
-Release: 2
+Version: 1.0.1
+Release: 1
 Group:   Development
 License: AGPLv3
+URL:     https://github.com/rui314/mold
 Source0: https://github.com/rui314/mold/archive/refs/tags/%{version}/%{name}-%{version}.tar.gz
 BuildRequires: cmake
 BuildRequires: pkgconfig(libxxhash)
@@ -29,11 +30,13 @@ build time especially in rapid debug-edit-rebuild cycles.
 %install
 export MANDIR=%{_mandir}
 export LIBDIR=%{_libdir}
+export LIBEXECDIR=%{_libexecdir}
 export BINDIR=%{_bindir}
 %make_install LTO=1 SYSTEM_TBB=1
 
 %files
 %{_bindir}/mold
 %{_bindir}/l*
+%{_libexecdir}/mold/ld
 %{_libdir}/mold/mold-wrapper.so
 %{_mandir}/man1/mold.1*
