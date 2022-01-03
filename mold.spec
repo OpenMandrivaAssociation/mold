@@ -30,12 +30,13 @@ build time especially in rapid debug-edit-rebuild cycles.
 %install
 export MANDIR=%{_mandir}
 export LIBDIR=%{_libdir}
+export LIBEXECDIR=%{_libexecdir}
 export BINDIR=%{_bindir}
 %make_install LTO=1 SYSTEM_TBB=1
 
 %files
 %{_bindir}/mold
 %{_bindir}/l*
-%{_prefix}/local/libexec/mold/ld
+%{_libexecdir}/mold/ld
 %{_libdir}/mold/mold-wrapper.so
 %{_mandir}/man1/mold.1*
