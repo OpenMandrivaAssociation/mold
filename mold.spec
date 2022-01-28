@@ -32,7 +32,7 @@ export MANDIR=%{_mandir}
 export LIBDIR=%{_libdir}
 export LIBEXECDIR=%{_libexecdir}
 export BINDIR=%{_bindir}
-%make_install LTO=1 SYSTEM_TBB=1
+%make_install PREFIX=%{_prefix} BINDIR=%{_bindir} MANDIR=%{_mandir} LIBDIR=%{_libdir} LIBEXECDIR=%{_libexecdir} LTO=1 SYSTEM_TBB=1
 
 %files
 %{_bindir}/mold
