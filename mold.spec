@@ -2,7 +2,7 @@
 
 Summary: Modern and fast linker
 Name: mold
-Version: 1.1
+Version: 1.2
 Release: 1
 Group:   Development
 License: AGPLv3
