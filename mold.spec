@@ -35,8 +35,10 @@ export BINDIR=%{_bindir}
 %make_install PREFIX=%{_prefix} BINDIR=%{_bindir} MANDIR=%{_mandir} LIBDIR=%{_libdir} LIBEXECDIR=%{_libexecdir} LTO=1 SYSTEM_TBB=1
 
 %files
+%doc %{_datadir}/doc/mold/LICENSE
 %{_bindir}/mold
 %{_bindir}/l*
 %{_libexecdir}/mold/ld
 %{_libdir}/mold/mold-wrapper.so
 %{_mandir}/man1/mold.1*
+%{_mandir}/man1/ld.mold.1.*
