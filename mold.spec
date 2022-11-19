@@ -2,13 +2,14 @@
 
 Summary: Modern and fast linker
 Name: mold
-Version: 1.7.0
+Version: 1.7.1
 Release: 1
 Group:   Development
 License: AGPLv3
 URL:     https://github.com/rui314/mold
-Source0: https://github.com/rui314/mold/archive/refs/tags/%{version}/%{name}-%{version}.tar.gz
+Source0: https://github.com/rui314/mold/archive/refs/tags/v%{version}.tar.gz
 BuildRequires: cmake
+BuildRequires: ninja
 BuildRequires: pkgconfig(libxxhash)
 BuildRequires: pkgconfig(openssl)
 BuildRequires: pkgconfig(zlib)
@@ -23,16 +24,13 @@ build time especially in rapid debug-edit-rebuild cycles.
 
 %prep
 %autosetup -p1
+%cmake -G Ninja
 
 %build
-%make_build PREFIX=%{_prefix} LIBDIR=%{_libdir} LTO=1 SYSTEM_TBB=1
+%ninja_build -C build
 
 %install
-export MANDIR=%{_mandir}
-export LIBDIR=%{_libdir}
-export LIBEXECDIR=%{_libexecdir}
-export BINDIR=%{_bindir}
-%make_install PREFIX=%{_prefix} BINDIR=%{_bindir} MANDIR=%{_mandir} LIBDIR=%{_libdir} LIBEXECDIR=%{_libexecdir} LTO=1 SYSTEM_TBB=1
+%ninja_install -C build
 
 %files
 %doc %{_datadir}/doc/mold/LICENSE
@@ -41,4 +39,4 @@ export BINDIR=%{_bindir}
 %{_libexecdir}/mold/ld
 %{_libdir}/mold/mold-wrapper.so
 %{_mandir}/man1/mold.1*
-%{_mandir}/man1/ld.mold.1.*
+%{_mandir}/man1/ld.mold.1*
