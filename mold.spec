@@ -3,7 +3,7 @@
 Summary: Modern and fast linker
 Name: mold
 Version: 1.11.0
-Release: 1
+Release: 2
 Group:   Development
 License: AGPLv3
 URL:     https://github.com/rui314/mold
