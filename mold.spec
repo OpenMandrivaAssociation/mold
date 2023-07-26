@@ -1,4 +1,5 @@
 %define _empty_manifest_terminate_build 0
+%global optflags %{optflags} -Wno-error -Wno-implicit-function-declaration
 
 Summary: Modern and fast linker
 Name: mold
