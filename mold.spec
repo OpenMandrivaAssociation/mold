@@ -36,6 +36,7 @@ build time especially in rapid debug-edit-rebuild cycles.
 
 %files
 %doc %{_datadir}/doc/mold/LICENSE
+%doc %{_datadir}/doc/mold/LICENSE.third-party
 %{_bindir}/mold
 %{_bindir}/l*
 %{_libexecdir}/mold/ld
