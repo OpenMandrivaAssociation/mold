@@ -3,8 +3,8 @@
 
 Summary: Modern and fast linker
 Name: mold
-Version: 2.0.0
-Release: 2
+Version: 2.1.0
+Release: 1
 Group:   Development
 License: MIT
 URL:     https://github.com/rui314/mold
