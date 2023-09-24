@@ -9,7 +9,6 @@ Group:   Development
 License: MIT
 URL:     https://github.com/rui314/mold
 Source0: https://github.com/rui314/mold/archive/refs/tags/v%{version}/%{name}-%{version}.tar.gz
-Patch0:  mold-2.0.0-add-missing-include.patch
 BuildRequires: cmake
 BuildRequires: ninja
 BuildRequires: pkgconfig(libxxhash)
