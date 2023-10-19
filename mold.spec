@@ -9,6 +9,7 @@ Group:   Development
 License: MIT
 URL:     https://github.com/rui314/mold
 Source0: https://github.com/rui314/mold/archive/refs/tags/v%{version}/%{name}-%{version}.tar.gz
+Patch0:  mold-2.3.0-static-helpers.patch
 BuildRequires: cmake
 BuildRequires: ninja
 BuildRequires: pkgconfig(libxxhash)
