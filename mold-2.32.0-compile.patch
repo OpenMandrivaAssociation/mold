@@ -1,0 +1,11 @@
+diff -up mold-2.32.0/third-party/mimalloc/src/prim/unix/prim.c.omv~ mold-2.32.0/third-party/mimalloc/src/prim/unix/prim.c
+--- mold-2.32.0/third-party/mimalloc/src/prim/unix/prim.c.omv~	2024-06-11 02:29:22.927889077 +0100
++++ mold-2.32.0/third-party/mimalloc/src/prim/unix/prim.c	2024-06-11 02:29:39.057951747 +0100
+@@ -28,6 +28,7 @@ terms of the MIT license. A copy of the
+ #include <sys/mman.h>  // mmap
+ #include <unistd.h>    // sysconf
+ #include <fcntl.h>     // open, close, read, access
++#include <stdlib.h>    // getenv
+   
+ #if defined(__linux__)
+   #include <features.h>

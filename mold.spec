@@ -9,9 +9,8 @@ Group:   Development
 License: MIT
 URL:     https://github.com/rui314/mold
 Source0: https://github.com/rui314/mold/archive/refs/tags/v%{version}/%{name}-%{version}.tar.gz
-#Patch0:  mold-2.3.0-static-helpers.patch
-BuildRequires: cmake
-BuildRequires: ninja
+Patch0:  mold-2.32.0-compile.patch
+BuildSystem: cmake
 BuildRequires: pkgconfig(libxxhash)
 BuildRequires: pkgconfig(openssl)
 BuildRequires: pkgconfig(zlib)
@@ -23,16 +22,6 @@ It is several times faster than LLVM lld linker, the second-fastest
 open-source linker.
 mold is created for increasing developer productivity by reducing
 build time especially in rapid debug-edit-rebuild cycles.
-
-%prep
-%autosetup -p1
-%cmake -G Ninja
-
-%build
-%ninja_build -C build
-
-%install
-%ninja_install -C build
 
 %files
 %doc %{_datadir}/doc/mold/LICENSE
