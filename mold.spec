@@ -9,7 +9,7 @@ Group:   Development
 License: MIT
 URL:     https://github.com/rui314/mold
 Source0: https://github.com/rui314/mold/archive/refs/tags/v%{version}/%{name}-%{version}.tar.gz
-Patch0:  mold-2.32.0-compile.patch
+#Patch0:  mold-2.32.0-compile.patch
 BuildSystem: cmake
 BuildRequires: pkgconfig(libxxhash)
 BuildRequires: pkgconfig(openssl)
