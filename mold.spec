@@ -3,7 +3,7 @@
 
 Summary: Modern and fast linker
 Name: mold
-Version: 2.36.0
+Version: 2.37.0
 Release: 1
 Group:   Development
 License: MIT
